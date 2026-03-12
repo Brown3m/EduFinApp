@@ -1,0 +1,78 @@
+### 
+POST http://127.0.0.1:8000/api/transactions/
+Content-Type: application/json
+Authorization: Basic QW1vczpBbW9zQDIwMjU=
+
+{
+  "title": "Grocery Shopping", 
+  "amount": "45.99", 
+  "transaction_type": "expense", 
+  "category": "Food", "date": "2026-03-11"
+}
+
+### 
+GET http://127.0.0.1:8000/api/transactions/
+Authorization: Basic QW1vczpBbW9zQDIwMjU=
+Accept: application/json
+
+###  
+GET http://127.0.0.1:8000/api/transactions/1
+Authorization: Basic QW1vczpBbW9zQDIwMjU=
+Accept: application/json
+
+###
+PUT http://127.0.0.1:8000/api/transactions/1/
+Authorization: Basic QW1vczpBbW9zQDIwMjU=
+Content-Type: application/json
+
+{"title": "Weekly Groceries", 
+"amount": "52.00", 
+"transaction_type": "expense", 
+"category": "Food", 
+"date": "2026-03-11"
+}
+
+###
+DELETE http://127.0.0.1:8000/api/transactions/1/
+
+###
+POST http://127.0.0.1:8000/api/transactions/ 
+Content-Type: application/json
+
+{"title": "Bad Transaction", 
+"amount": "-10.00", 
+"transaction_type": "expense", 
+"date": "2026-03-11"
+}
+
+###
+POST http://127.0.0.1:8000/api/transactions/ 
+Content-Type: application/json
+
+{
+"amount": "-10.00", 
+"transaction_type": "expense", 
+"date": "2026-03-11"
+}
+
+###
+PUT http://127.0.0.1:8000/api/transactions/999/
+Authorization: Basic QW1vczpBbW9zQDIwMjU=
+Content-Type: application/json
+
+{"title": "Weekly Groceries", 
+"amount": "52.00", 
+"transaction_type": "expense", 
+"category": "Food", 
+"date": "2026-03-11"
+}
+
+###
+POST http://127.0.0.1:8000/api/transactions/ 
+Content-Type: application/json
+
+{"title": "Bad Transaction", 
+"amount": "-10.00", 
+"transaction_type": "loan", 
+"date": "2026-03-11"
+}
