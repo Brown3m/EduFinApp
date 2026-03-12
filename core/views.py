@@ -5,8 +5,8 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 
-from core.models import Testing, Transaction, Budget
-from core.serializers import TestingSerializer, TransactionSerializer, BudgetSerializer
+from core.models import Testing, Transaction, Budget, Category
+from core.serializers import TestingSerializer, TransactionSerializer, BudgetSerializer, CategorySerializer
 
 
 # --- Existing views from Lab 1 ---

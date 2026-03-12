@@ -76,3 +76,33 @@ Content-Type: application/json
 "transaction_type": "loan", 
 "date": "2026-03-11"
 }
+
+### 
+POST http://127.0.0.1:8000/api/categories/
+Content-Type: application/json
+
+{
+  "name": "practice", 
+  "description": "practice description"
+}
+
+###
+GET http://127.0.0.1:8000/api/categories/
+Accept: application/json
+
+###
+GET http://127.0.0.1:8000/api/categories/1/
+Accept: application/json
+
+###
+
+PUT http://127.0.0.1:8000/api/categories/1/
+Content-Type: application/json
+
+{
+  "name": "updated practice", 
+  "description": "practice description"
+}
+
+###
+DELETE http://127.0.0.1:8000/api/categories/2/
