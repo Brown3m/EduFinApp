@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from core.models import Testing, Transaction, Budget
+from core.models import Testing, Transaction, Budget,Category
 
 
 class TestingSerializer(serializers.ModelSerializer):
